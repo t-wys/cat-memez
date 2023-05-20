@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "title": "aaa",
+        "datePublished": "",
+        "upvotes": 34,
+        "downvotes": 3,
+        "image": ""
+    },
+    {
+        "id": 2,
+        "title": "bbb",
+        "datePublished": "",
+        "upvotes": 35,
+        "downvotes": 12,
+        "image": ""
+    },
+    {
+        "id": 3,
+        "title": "ccc",
+        "datePublished": "",
+        "upvotes": 7,
+        "downvotes": 1,
+        "image": ""
+    },
+    {
+        "id": 4,
+        "title": "ddd",
+        "datePublished": "",
+        "upvotes": 5,
+        "downvotes": 0,
+        "image": ""
+    },
+    {
+        "id": 5,
+        "title": "eee",
+        "datePublished": "",
+        "upvotes": 127,
+        "downvotes": 18,
+        "image": ""
+    },
+    {
+        "id": 6,
+        "title": "fff",
+        "datePublished": "",
+        "upvotes": 21,
+        "downvotes": 8,
+        "image": ""
+    }
+]
