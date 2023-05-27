@@ -17,7 +17,9 @@ function Layout() {
                 </ul>
             </nav>
 
-            <Outlet/>
+            <main id="main-content">
+                <Outlet/>
+            </main>
         </>
     )
 }

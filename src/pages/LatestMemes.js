@@ -1,9 +1,14 @@
-function LatestMemes({ memeList }) {
+import { useSelector } from 'react-redux';
+import { Meme } from '../components/Meme';
+
+function LatestMemes() {
+    const memeList = useSelector(state => state.allMemes);
+
     return (<div>
         <h1>New funny cat memez!!!1!11one</h1>
-        <ul>
-            {memeList.map(meme => <li key={meme.id}>{ meme.title }</li>)}
-        </ul>
+        <div className='meme-list'>
+            {memeList.map(meme => <Meme meme={meme} key={meme.id} />)}
+        </div>
     </div>)
 }
 

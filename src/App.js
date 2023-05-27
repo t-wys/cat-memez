@@ -1,6 +1,8 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import logo from './logo.svg';
+import { useDispatch } from 'react-redux';
+// import logo from './logo.svg';
+import { checkMeme } from './utils/utils';
 import './App.css';
 import Layout from './pages/Layout';
 import LatestMemes from './pages/LatestMemes';
@@ -9,12 +11,7 @@ import About from './pages/About';
 import PageNotFound from './pages/PageNotFound';
 
 function App() {
-  const [allMemes, setAllMemes] = useState([]);
-  const [trendingMemes, setTrendingMemes] = useState([]);
-
-  const checkMeme = (memeData) => {
-    return memeData.upvotes > 3 * memeData.downvotes;
-  }
+  const dispatch = useDispatch();
 
   const getData = () => {
     fetch('data.json', { headers: {
@@ -25,8 +22,13 @@ function App() {
       return response.json();
     })
     .then(respJson => {
-      setAllMemes(respJson);
-      setTrendingMemes(respJson.filter(meme => checkMeme(meme)));
+      dispatch({
+        type: 'LOAD_MEMES',
+        payload: {
+          allMemes: respJson,
+          bestMemes: respJson.filter(meme => checkMeme(meme.rating, meme.votesCount))
+        }
+      })
     })
     .catch(err => {
       console.error('Error fetching data from json file', err);
@@ -35,14 +37,14 @@ function App() {
 
   useEffect(() => {
     getData();
-  }, []);
+  });
 
   return (
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Layout/>}>
-          <Route index element={<LatestMemes memeList={allMemes} />} />
-          <Route path='/trending' element={<TrendingMemes memeList={trendingMemes} />} />
+          <Route index element={<LatestMemes />} />
+          <Route path='/trending' element={<TrendingMemes />} />
           <Route path='/about' element={<About/>} />
           <Route path='*' element={<PageNotFound/>}/>
         </Route>

@@ -1,9 +1,14 @@
-function TrendingMemes({ memeList }) {
+import { useSelector } from 'react-redux';
+import { Meme } from '../components/Meme';
+
+function TrendingMemes() {
+    const memeList = useSelector(state => state.bestMemes);
+
     return (<div>
         <h1>Top-notch stuff</h1>
-        <ul>
-            {memeList.map(meme => <li key={meme.id}>{ meme.title }</li>)}
-        </ul>
+        <div className='meme-list'>
+            {memeList.map(meme => <Meme meme={meme} key={meme.id} />)}
+        </div>
     </div>)
 }
 

@@ -1,50 +1,50 @@
 [
     {
         "id": 1,
-        "title": "aaa",
+        "title": "Shelves, the Earth, Wherever",
         "datePublished": "",
-        "upvotes": 34,
-        "downvotes": 3,
-        "image": ""
+        "rating": 34,
+        "votesCount": 51,
+        "image": "./memes/cat-meme-01.png"
     },
     {
         "id": 2,
-        "title": "bbb",
+        "title": "Randomly Attacking Arms Since 10,000 B.C.",
         "datePublished": "",
-        "upvotes": 35,
-        "downvotes": 12,
-        "image": ""
+        "rating": 34,
+        "votesCount": 69,
+        "image": "./memes/cat-meme-02.png"
     },
     {
         "id": 3,
-        "title": "ccc",
+        "title": "Just a Little Cat Nap",
         "datePublished": "",
-        "upvotes": 7,
-        "downvotes": 1,
-        "image": ""
+        "rating": 7,
+        "votesCount": 8,
+        "image": "./memes/cat-meme-03.png"
     },
     {
         "id": 4,
-        "title": "ddd",
+        "title": "Not the Bees!",
         "datePublished": "",
-        "upvotes": 5,
-        "downvotes": 0,
-        "image": ""
+        "rating": 5,
+        "votesCount": 5,
+        "image": "./memes/cat-meme-04.png"
     },
     {
         "id": 5,
-        "title": "eee",
+        "title": "So Easily Fooled",
         "datePublished": "",
-        "upvotes": 127,
-        "downvotes": 18,
-        "image": ""
+        "rating": 127,
+        "votesCount": 145,
+        "image": "./memes/cat-meme-05.png"
     },
     {
         "id": 6,
-        "title": "fff",
+        "title": "She's Accessed the Mainframe",
         "datePublished": "",
-        "upvotes": 21,
-        "downvotes": 8,
-        "image": ""
+        "rating": 21,
+        "votesCount": 83,
+        "image": "./memes/cat-meme-06.png"
     }
 ]
