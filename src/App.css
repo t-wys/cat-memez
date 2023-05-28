@@ -1,53 +1,132 @@
-.App {
-  text-align: center;
+#main-content {
+  margin: 0 auto;
+  width: 40vw;
+  margin-top: 54px;
+  padding: 16px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Comic Neue', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.decorative-hrule {
+  border-color: #88D1D1;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar {
+  position: fixed;
+  width: 100vw;
+  color: white;
+  background-color: #2E8585;
+  top: 0;
+  margin: 0;
+  padding: 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.navbar .navbar-brand {
+  text-transform: uppercase;
+  text-align: center;
+  padding: 16px 32px;
+  font-family: 'Comic Neue', sans-serif;
+}
+
+.navbar .navbar-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar .navbar-links li {
+  padding: 16px;
+}
+
+.navbar .navbar-links li a {
+  text-decoration: none;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar .navbar-links li:has(> a.active) {
+  background-color: #88D1D1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar .navbar-links li a.active {
+  color: black;
 }
 
-#main-content {
-  margin: 0 auto;
-  width: 50vw;
+.navbar .navbar-links li a:hover {
+  text-decoration: underline;
 }
 
-.meme-list {
+.excesive-exlamation-marks-1 {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: smaller;
+}
 
+.excesive-exlamation-marks-2 {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: small;
+}
+
+.excesive-exlamation-marks-3 {
+  color: rgba(255, 255, 255, 0.25);
+  font-size: x-small;
 }
 
 .meme-card {
-  border: 1px solid black;
-  margin-bottom: 16px;
+  /* border: 1px solid #638585; */
+  border-radius: 8px;
+  margin-bottom: 32px;
   padding: 16px;
+  background-color: #253939;
+  /* box-shadow: 8px 8px #101010; */
+  box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
+}
+
+.meme-title {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.meme-subtitle {
+  margin-top: 0;
+  font-size: small;
+  font-weight: 400;
+}
+
+.meme-subtitle .meme-author {
+  font-style: italic;
+}
+
+.meme-img {
+  width: 100%;
+  height: auto;
+}
+
+.meme-card-footer {
+  margin-top: 8px;
+}
+
+.upvotes-counter {
+  font-weight: 600;
+}
+
+.voting-buttons {
+  margin-top: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.voting-btn {
+  color: white;
+  background-color: inherit;
+  border: 1px solid #638585;
+  border-radius: 8px;
+  padding: 16px 32px;
+  width: 49%;
+}
+
+.voting-btn:hover {
+  background-color: #638585;
 }
