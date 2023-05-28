@@ -11,7 +11,7 @@ export const memesReducer = (state = initState, action) => {
             return { ...state, allMemes: action.payload.allMemes, bestMemes: action.payload.bestMemes };
         }
         case 'CAST_VOTE': {
-            const memeIdx = state.allMemes.findIndex(m => m.id = action.payload.memeId);
+            const memeIdx = state.allMemes.findIndex(m => m.id === action.payload.memeId);
             
             if (memeIdx !== -1) {
                 const meme = state.allMemes[memeIdx];
