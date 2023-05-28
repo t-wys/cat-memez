@@ -4,6 +4,7 @@ export const Meme = ({ meme }) => {
     const dispatch = useDispatch();
 
     const handleUpvote = () => {
+        // TODO: Check if vote is already casted and pick either CAST_VOTE or REVOKE_VOTE actions
         dispatch({
             type: 'CAST_VOTE',
             payload: {
@@ -14,6 +15,7 @@ export const Meme = ({ meme }) => {
     }
 
     const handleDownvote = () => {
+        // TODO: Check if vote is already casted and pick either CAST_VOTE or REVOKE_VOTE actions
         dispatch({
             type: 'CAST_VOTE',
             payload: {
@@ -42,8 +44,12 @@ export const Meme = ({ meme }) => {
                 </span>
             </span>
             <div className="voting-buttons">
-                <button className="voting-btn upvote" onClick={handleUpvote}>Yeah! Paws up!</button>
-                <button className="voting-btn downvote" onClick={handleDownvote}>Meh</button>
+                <button className={"voting-btn" + (meme.userVote === 1 ? " voted": "")} onClick={handleUpvote}>
+                    Yeah! Paws up!
+                </button>
+                <button className={"voting-btn" + (meme.userVote === -1 ? " voted": "")} onClick={handleDownvote}>
+                    Meh
+                </button>
             </div>
         </div>
     </div>)

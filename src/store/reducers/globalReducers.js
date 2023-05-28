@@ -24,6 +24,7 @@ export const memesReducer = (state = initState, action) => {
 
                 // update meme rating
                 memeNew.rating += action.payload.vote;
+                memeNew.userVote = action.payload.vote;
                 memeNew.votesCount += 1;
                 allMemesNew[memeIdx] = memeNew;
 
@@ -41,7 +42,11 @@ export const memesReducer = (state = initState, action) => {
                 return { ...state, allMemes: allMemesNew, bestMemes: bestMemesNew };
             }
 
-            return { ...state };
+            return state;
+        }
+        case 'REVOKE_VOTE': {
+            // TODO: Apply logic similar to 'CAST_VOTE'
+            return state;
         }
         case 'ADD_MEME': {
             return state;
