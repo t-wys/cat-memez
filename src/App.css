@@ -1,6 +1,6 @@
 #main-content {
   margin: 0 auto;
-  width: 40vw;
+  width: 80vw;
   margin-top: 54px;
   padding: 16px;
 }
@@ -17,11 +17,12 @@ h1, h2, h3, h4, h5, h6 {
   position: fixed;
   width: 100vw;
   color: white;
-  background-color: #2E8585;
+  background-color: #253939;
   top: 0;
   margin: 0;
   padding: 0;
   display: flex;
+  box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
 }
 
 .navbar .navbar-brand {
@@ -75,12 +76,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .meme-card {
-  /* border: 1px solid #638585; */
   border-radius: 8px;
   margin-bottom: 32px;
   padding: 16px;
   background-color: #253939;
-  /* box-shadow: 8px 8px #101010; */
   box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
 }
 
@@ -121,6 +120,8 @@ h1, h2, h3, h4, h5, h6 {
 .voting-buttons {
   margin-top: 8px;
   display: flex;
+  flex-direction: column;
+  row-gap: 8px;
   justify-content: space-between;
 }
 
@@ -130,7 +131,8 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid #638585;
   border-radius: 8px;
   padding: 16px 32px;
-  width: 49%;
+  flex-basis: 0;
+  flex-grow: 1;
 }
 
 .voting-btn:hover {
@@ -139,6 +141,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .voting-btn.voted {
   background-color: #88D1D1;
+  color: black;
 }
 
 .has-tooltip {
@@ -149,4 +152,22 @@ h1, h2, h3, h4, h5, h6 {
 .fav-meme-icon {
   cursor: pointer;
   font-size: x-large;
+}
+
+@media only screen and (min-width: 600px) {
+  #main-content {
+    width: 60vw;
+  }
+
+  .voting-buttons {
+    flex-direction: row;
+    row-gap: unset;
+    column-gap: 8px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  #main-content {
+    width: 40vw;
+  }  
 }
