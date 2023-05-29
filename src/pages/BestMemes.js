@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import { Meme } from '../components/Meme';
 
-function TrendingMemes() {
+function BestMemes() {
     const memeList = useSelector(state => state.bestMemes);
 
     return (<div>
@@ -14,4 +14,4 @@ function TrendingMemes() {
     </div>)
 }
 
-export default TrendingMemes;
+export default BestMemes;

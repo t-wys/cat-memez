@@ -8,7 +8,7 @@ export const Navbar = () => {
                 <NavLink to="/">Latest</NavLink>
             </li>
             <li>
-                <NavLink to="/trending">Trending</NavLink>
+                <NavLink to="/best">Best</NavLink>
             </li>
             <li>
                 <NavLink to="/about">About</NavLink>

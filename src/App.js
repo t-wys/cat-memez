@@ -6,7 +6,7 @@ import { checkMeme } from './utils/utils';
 import './App.css';
 import Layout from './pages/Layout';
 import LatestMemes from './pages/LatestMemes';
-import TrendingMemes from './pages/TrendingMemes';
+import BestMemes from './pages/BestMemes';
 import About from './pages/About';
 import PageNotFound from './pages/PageNotFound';
 
@@ -44,7 +44,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Layout/>}>
           <Route index element={<LatestMemes />} />
-          <Route path='/trending' element={<TrendingMemes />} />
+          <Route path='/best' element={<BestMemes />} />
           <Route path='/about' element={<About/>} />
           <Route path='*' element={<PageNotFound/>}/>
         </Route>
