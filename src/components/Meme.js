@@ -1,4 +1,5 @@
 import { useDispatch } from "react-redux";
+import { FavButton } from "./FavButton";
 
 const upvoteValue = 1;
 const downvoteValue = -1;
@@ -30,7 +31,10 @@ export const Meme = ({ meme }) => {
 
     return (<div className="meme-card">
         <div className="meme-card-header">
-            <h4 className="meme-title">{ meme.title }</h4>
+            <div className="card-title-bar">
+                <h4 className="meme-title">{ meme.title }</h4>
+                <FavButton meme={meme} />
+            </div>
             <p className="meme-subtitle">2023-05-06 by <span className="meme-author">User</span></p>
         </div>
         <div className="meme-card-content">

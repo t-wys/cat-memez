@@ -16,7 +16,25 @@ export const memesReducer = (state = initState, action) => {
         case 'REVOKE_VOTE': {
             return getStateAfterVoting(state, action.payload);
         }
-        case 'ADD_MEME': {
+        case 'TOGGLE_FAVOURITE': {
+            const memeIdx = state.allMemes.findIndex(m => m.id === action.payload.memeId);
+            
+            if (memeIdx !== -1) {
+                const allMemesNew = copyListOfObjects(state.allMemes);
+                allMemesNew[memeIdx].isFavourite = !allMemesNew[memeIdx].isFavourite;
+                
+                const memeIdxBest = state.bestMemes.findIndex(m => m.id === action.payload.memeId);
+
+                if (memeIdxBest === -1) {
+                    return { ...state, allMemes: allMemesNew };
+                }
+
+                const bestMemesNew = copyListOfObjects(state.bestMemes);
+                bestMemesNew[memeIdxBest].isFavourite = !bestMemesNew[memeIdxBest].isFavourite;
+
+                return { ...state, allMemes: allMemesNew, bestMemes: bestMemesNew };
+            }
+
             return state;
         }
         default: {
