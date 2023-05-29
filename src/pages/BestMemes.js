@@ -9,7 +9,7 @@ function BestMemes() {
         <hr className="decorative-hrule" />
         <p>Only the best memez, approved by community</p>
         <div>
-            {memeList.map(meme => <Meme meme={meme} key={meme.id} />)}
+            {memeList.toSorted((a, b) => (b.rating / b.votesCount) - (a.rating / a.votesCount)).map(meme => <Meme meme={meme} key={meme.id} />)}
         </div>
     </div>)
 }

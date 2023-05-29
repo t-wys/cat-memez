@@ -22,11 +22,15 @@ function App() {
       return response.json();
     })
     .then(respJson => {
+      const memes = respJson.map(meme => {
+        meme.datePublished = Date.parse(meme.datePublished);
+        return meme;
+      })
       dispatch({
         type: 'LOAD_MEMES',
         payload: {
-          allMemes: respJson,
-          bestMemes: respJson.filter(meme => checkMeme(meme.rating, meme.votesCount))
+          allMemes: memes,
+          bestMemes: memes.filter(meme => checkMeme(meme.rating, meme.votesCount))
         }
       })
     })
