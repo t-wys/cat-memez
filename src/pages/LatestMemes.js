@@ -7,13 +7,13 @@ function LatestMemes() {
     return (<div>
         <h1>
             New funny cat memez!
-            <span className='excesive-exlamation-marks-1'>1!!</span>
-            <span className='excesive-exlamation-marks-2'>!11</span>
-            <span className='excesive-exlamation-marks-3'>one</span>
+            <span className="excesive-exlamation-marks-1">1!!</span>
+            <span className="excesive-exlamation-marks-2">!11</span>
+            <span className="excesive-exlamation-marks-3">one</span>
         </h1>
-        <hr className='decorative-hrule' />
+        <hr className="decorative-hrule" />
         <p>The latest content from our users</p>
-        <div className='meme-list'>
+        <div>
             {memeList.map(meme => <Meme meme={meme} key={meme.id} />)}
         </div>
     </div>)

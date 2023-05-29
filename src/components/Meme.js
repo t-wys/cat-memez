@@ -1,5 +1,5 @@
-import { FavButton } from "./FavButton";
-import { VotingButton } from "./VotingButton";
+import { FavButton } from './FavButton';
+import { VotingButton } from './VotingButton';
 
 export const Meme = ({ meme }) => {
     const upvoteValue = 1;

@@ -1,5 +1,5 @@
-import { createStore } from "redux";
-import { memesReducer } from "./reducers/globalReducers";
+import { createStore } from 'redux';
+import { memesReducer } from './reducers/globalReducers';
 
 const store = createStore(memesReducer);
 

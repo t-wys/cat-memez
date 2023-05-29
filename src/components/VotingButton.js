@@ -1,4 +1,4 @@
-import { useDispatch } from "react-redux"
+import { useDispatch } from 'react-redux'
 
 export const VotingButton = ({ meme, title, voteValue }) => {
     const dispatch = useDispatch();
