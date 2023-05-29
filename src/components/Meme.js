@@ -1,33 +1,9 @@
-import { useDispatch } from "react-redux";
 import { FavButton } from "./FavButton";
-
-const upvoteValue = 1;
-const downvoteValue = -1;
+import { VotingButton } from "./VotingButton";
 
 export const Meme = ({ meme }) => {
-    const dispatch = useDispatch();
-
-    const handleUpvote = () => {
-        const isRevokingVote = meme.userVote === upvoteValue;
-        dispatch({
-            type: isRevokingVote ? 'REVOKE_VOTE' : 'CAST_VOTE',
-            payload: {
-                memeId: meme.id,
-                vote: isRevokingVote ? 0 : upvoteValue
-            }
-        });
-    }
-
-    const handleDownvote = () => {
-        const isRevokingVote = meme.userVote === downvoteValue;
-        dispatch({
-            type: isRevokingVote ? 'REVOKE_VOTE' : 'CAST_VOTE',
-            payload: {
-                memeId: meme.id,
-                vote: isRevokingVote ? 0 : downvoteValue
-            }
-        });
-    }
+    const upvoteValue = 1;
+    const downvoteValue = -1;
 
     return (<div className="meme-card">
         <div className="meme-card-header">
@@ -51,12 +27,8 @@ export const Meme = ({ meme }) => {
                 </span>)
             </span>
             <div className="voting-buttons">
-                <button className={"voting-btn" + (meme.userVote === upvoteValue ? " voted": "")} onClick={handleUpvote}>
-                    Yeah! Paws up!
-                </button>
-                <button className={"voting-btn" + (meme.userVote === downvoteValue ? " voted": "")} onClick={handleDownvote}>
-                    Meh
-                </button>
+                <VotingButton meme={meme} title="Yeah! Paws up!" voteValue={upvoteValue} />
+                <VotingButton meme={meme} title="Meh" voteValue={downvoteValue} />
             </div>
         </div>
     </div>)
