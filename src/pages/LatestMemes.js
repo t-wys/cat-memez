@@ -7,7 +7,7 @@ function LatestMemes() {
     return (<div>
         <h1>
             New funny cat memez!
-            <span className='excesive-exlamation-marks-1'>!!1</span>
+            <span className='excesive-exlamation-marks-1'>1!!</span>
             <span className='excesive-exlamation-marks-2'>!11</span>
             <span className='excesive-exlamation-marks-3'>one</span>
         </h1>

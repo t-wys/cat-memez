@@ -1,26 +1,29 @@
 import { useDispatch } from "react-redux";
 
+const upvoteValue = 1;
+const downvoteValue = -1;
+
 export const Meme = ({ meme }) => {
     const dispatch = useDispatch();
 
     const handleUpvote = () => {
-        // TODO: Check if vote is already casted and pick either CAST_VOTE or REVOKE_VOTE actions
+        const isRevokingVote = meme.userVote === upvoteValue;
         dispatch({
-            type: 'CAST_VOTE',
+            type: isRevokingVote ? 'REVOKE_VOTE' : 'CAST_VOTE',
             payload: {
                 memeId: meme.id,
-                vote: 1
+                vote: isRevokingVote ? 0 : upvoteValue
             }
         });
     }
 
     const handleDownvote = () => {
-        // TODO: Check if vote is already casted and pick either CAST_VOTE or REVOKE_VOTE actions
+        const isRevokingVote = meme.userVote === downvoteValue;
         dispatch({
-            type: 'CAST_VOTE',
+            type: isRevokingVote ? 'REVOKE_VOTE' : 'CAST_VOTE',
             payload: {
                 memeId: meme.id,
-                vote: -1
+                vote: isRevokingVote ? 0 : downvoteValue
             }
         });
     }
@@ -35,19 +38,19 @@ export const Meme = ({ meme }) => {
         </div>
         <div className="meme-card-footer">
             <span>
-                <span className="upvotes-counter" title="upvotes count">
+                <span className="upvotes-counter has-tooltip" title="upvotes count">
                     { meme.rating }
                 </span>
                 &nbsp;
-                <span title="upvotes to total votes count">
-                    ({ Math.round(100 * meme.rating/meme.votesCount) }%)
-                </span>
+                (<span className="has-tooltip" title="upvotes to total votes">
+                    { Math.round(100 * meme.rating/meme.votesCount) }%
+                </span>)
             </span>
             <div className="voting-buttons">
-                <button className={"voting-btn" + (meme.userVote === 1 ? " voted": "")} onClick={handleUpvote}>
+                <button className={"voting-btn" + (meme.userVote === upvoteValue ? " voted": "")} onClick={handleUpvote}>
                     Yeah! Paws up!
                 </button>
-                <button className={"voting-btn" + (meme.userVote === -1 ? " voted": "")} onClick={handleDownvote}>
+                <button className={"voting-btn" + (meme.userVote === downvoteValue ? " voted": "")} onClick={handleDownvote}>
                     Meh
                 </button>
             </div>

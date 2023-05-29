@@ -134,3 +134,8 @@ h1, h2, h3, h4, h5, h6 {
 .voting-btn.voted {
   background-color: #88D1D1;
 }
+
+.has-tooltip {
+  text-decoration: underline dotted;
+  cursor: help;
+}
