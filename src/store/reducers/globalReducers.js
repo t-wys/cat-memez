@@ -32,11 +32,8 @@ const getStateAfterVoting = (state, payload) => {
     if (memeIdx !== -1) {
         const meme = state.allMemes[memeIdx];
         const userPreviousVote = meme.userVote;
-        
-        const isBestBeforeVote = checkMeme(meme.rating, meme.votesCount);
-        const isBestAfterVote = checkMeme(meme.rating + payload.vote, meme.votesCount + 1);
 
-        const allMemesNew = [...state.allMemes];
+        const allMemesNew = copyListOfObjects(state.allMemes);
         const memeNew = allMemesNew[memeIdx];
 
         // update meme rating
@@ -68,7 +65,12 @@ const getStateAfterVoting = (state, payload) => {
         memeNew.userVote = payload.vote;
         allMemesNew[memeIdx] = memeNew;
 
-        let bestMemesNew = [...state.bestMemes];
+        let bestMemesNew = copyListOfObjects(state.bestMemes);
+
+        const isBestBeforeVote = checkMeme(meme.rating, meme.votesCount);
+        console.log(`BEFORE: rating=${meme.rating} | count=${meme.votesCount} | isBest=${isBestBeforeVote}`)
+        const isBestAfterVote = checkMeme(memeNew.rating, memeNew.votesCount);
+        console.log(`AFTER: rating=${memeNew.rating} | count=${memeNew.votesCount} | isBest=${isBestAfterVote}`)
         
         // promote entry to the bestMemes list
         if (!isBestBeforeVote && isBestAfterVote) {
@@ -83,4 +85,8 @@ const getStateAfterVoting = (state, payload) => {
     }
 
     return state;
+}
+
+const copyListOfObjects = (arr) => {
+    return arr.map(obj => { return { ...obj }})
 }
