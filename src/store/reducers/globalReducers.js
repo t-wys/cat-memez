@@ -86,9 +86,7 @@ const getStateAfterVoting = (state, payload) => {
         let bestMemesNew = copyListOfObjects(state.bestMemes);
 
         const isBestBeforeVote = checkMeme(meme.rating, meme.votesCount);
-        console.log(`BEFORE: rating=${meme.rating} | count=${meme.votesCount} | isBest=${isBestBeforeVote}`)
         const isBestAfterVote = checkMeme(memeNew.rating, memeNew.votesCount);
-        console.log(`AFTER: rating=${memeNew.rating} | count=${memeNew.votesCount} | isBest=${isBestAfterVote}`)
         
         // promote entry to the bestMemes list
         if (!isBestBeforeVote && isBestAfterVote) {
