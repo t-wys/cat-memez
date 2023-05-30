@@ -18,6 +18,10 @@ The application displays a list of images (memes) and allows user to either upvo
 * Vote for a meme
 * Add meme to favorites by clicking a star icon
 
+### Note
+
+The meme with id = 10 (_The Answer to the Riddle_) has votes count predfined in such a way that upvote will move it to the best memes.
+
 ## Running the Application
 
 Navigate to the project directory in your command line application and use command:

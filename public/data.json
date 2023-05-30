@@ -64,5 +64,49 @@
         "image": "./memes/cat-meme-06.png",
         "userVote": 0,
         "isFavourite": false
+    },
+    {
+        "id": 7,
+        "title": "Quite a Surprise",
+        "datePublished": "2023-01-06T11:13:27.168Z",
+        "author": "Snuffles",
+        "rating": 256,
+        "votesCount": 299,
+        "image": "./memes/cat-meme-07.png",
+        "userVote": 0,
+        "isFavourite": false
+    },
+    {
+        "id": 8,
+        "title": "Prime Warmth Real Estate",
+        "datePublished": "2023-01-28T19:00:50.107Z",
+        "author": "drama_queen",
+        "rating": 350,
+        "votesCount": 374,
+        "image": "./memes/cat-meme-08.png",
+        "userVote": 0,
+        "isFavourite": false
+    },
+    {
+        "id": 9,
+        "title": "The Temptation Is Real",
+        "datePublished": "2023-01-28T19:00:50.107Z",
+        "author": "username_copied",
+        "rating": 89,
+        "votesCount": 97,
+        "image": "./memes/cat-meme-09.png",
+        "userVote": 0,
+        "isFavourite": false
+    },
+    {
+        "id": 10,
+        "title": "The Answer to the Riddle",
+        "datePublished": "2023-02-17T15:30:04.015Z",
+        "author": "real_name_hidden",
+        "rating": 66,
+        "votesCount": 99,
+        "image": "./memes/cat-meme-10.png",
+        "userVote": 0,
+        "isFavourite": false
     }
 ]
