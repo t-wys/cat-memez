@@ -14,7 +14,7 @@ function LatestMemes() {
         <hr className="decorative-hrule" />
         <p>The latest content from our users</p>
         <div>
-            {memeList.toSorted((a, b) => new Date(b.publishedDate) - new Date(a.publishedDate)).map(meme => <Meme meme={meme} key={meme.id} />)}
+            {memeList.toSorted((a, b) => b.datePublished - a.datePublished).map(meme => <Meme meme={meme} key={meme.id} />)}
         </div>
     </div>)
 }
