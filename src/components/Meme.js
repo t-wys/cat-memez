@@ -31,8 +31,8 @@ export const Meme = ({ meme }) => {
                 </span>)
             </span>
             <div className="voting-buttons">
-                <VotingButton meme={meme} title="Yeah! Paws up!" voteValue={upvoteValue} />
-                <VotingButton meme={meme} title="Meh" voteValue={downvoteValue} />
+                <VotingButton meme={meme} title="😺 Yeah! Paws up!" voteValue={upvoteValue} />
+                <VotingButton meme={meme} title="😾 Meh" voteValue={downvoteValue} />
             </div>
         </section>
     </article>)
