@@ -26,7 +26,9 @@ The meme with id = 10 (_The Answer to the Riddle_) has votes count predfined in 
 
 Navigate to the project directory in your command line application and use command:
 
-`npm start`
+`npm install && npm start` (for the first run)
+or
+`npm start` (if dependencies are already installed)
 
 It will Run the application in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
