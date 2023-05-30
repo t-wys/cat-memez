@@ -1,13 +1,13 @@
 import { useSelector } from 'react-redux';
 import { Meme } from '../components/Meme';
+import { PageTitle } from '../components/PageTitle';
 
 function BestMemes() {
     const memeList = useSelector(state => state.bestMemes);
 
     return (<div>
         <section>
-            <h1>Top-notch stuff</h1>
-            <hr className="decorative-hrule" />
+            <PageTitle title="Top-notch stuff" />
             <p>Only the best memez, approved by community</p>
             <p>The meme must get <em>100+ votes</em> with <em>over 66% upvotes</em> to claim its spot among the best</p>
         </section>
