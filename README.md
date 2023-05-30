@@ -29,7 +29,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ## About the Memes
 
-The memes and their title in this app has been taken from ![https://bestlifeonline.com/funniest-cat-memes-ever/](https://bestlifeonline.com/funniest-cat-memes-ever/)
+The memes and their title in this app has been taken from [https://bestlifeonline.com/funniest-cat-memes-ever/](https://bestlifeonline.com/funniest-cat-memes-ever/)
 
 ## Other
 
