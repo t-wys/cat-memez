@@ -75,6 +75,10 @@ h1, h2, h3, h4, h5, h6 {
   font-size: x-small;
 }
 
+.meme-list {
+  margin-top: 32px;
+}
+
 .meme-card {
   border-radius: 8px;
   margin-bottom: 32px;

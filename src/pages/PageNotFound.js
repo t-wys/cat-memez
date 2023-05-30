@@ -1,9 +1,9 @@
 function PageNotFound() {
-    return (<div>
+    return (<section>
         <h1>Oops!</h1>
         <hr className="decorative-hrule" />
         <p>Page not found</p>
-    </div>)
+    </section>)
 }
 
 export default PageNotFound;

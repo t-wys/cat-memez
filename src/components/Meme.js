@@ -9,18 +9,18 @@ export const Meme = ({ meme }) => {
     const publishDateString = publishDate.toISOString().substring(0, 10);
     const publishTimeString = publishDate.toISOString().substring(11, 16);
 
-    return (<div className="meme-card">
-        <div className="meme-card-header">
+    return (<article className="meme-card">
+        <section className="meme-card-header">
             <div className="card-title-bar">
                 <h4 className="meme-title">{ meme.title }</h4>
                 <FavButton meme={meme} />
             </div>
             <p className="meme-subtitle">{publishDateString} {publishTimeString} by <span className="meme-author">{meme.author}</span></p>
-        </div>
-        <div className="meme-card-content">
+        </section>
+        <section className="meme-card-content">
             <img className="meme-img" src={meme.image} alt={meme.title} />
-        </div>
-        <div className="meme-card-footer">
+        </section>
+        <section className="meme-card-footer">
             <span>
                 <span className="upvotes-counter has-tooltip" title="upvotes count">
                     { meme.rating }
@@ -34,6 +34,6 @@ export const Meme = ({ meme }) => {
                 <VotingButton meme={meme} title="Yeah! Paws up!" voteValue={upvoteValue} />
                 <VotingButton meme={meme} title="Meh" voteValue={downvoteValue} />
             </div>
-        </div>
-    </div>)
+        </section>
+    </article>)
 }
