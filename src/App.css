@@ -175,3 +175,12 @@ h1, h2, h3, h4, h5, h6 {
     width: 40vw;
   }  
 }
+
+.img-404-container {
+  text-align: center;
+}
+
+.img-404 {
+  max-width: 100%;
+  height: auto;
+}
