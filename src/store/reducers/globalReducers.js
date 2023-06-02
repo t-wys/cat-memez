@@ -96,6 +96,11 @@ const getStateAfterVoting = (state, payload) => {
         else if (isBestBeforeVote && !isBestAfterVote) {
             bestMemesNew = bestMemesNew.filter(m => m.id !== memeNew.id);
         }
+        // just update the meme in the list
+        else {
+            const bestMemeIdx = bestMemesNew.findIndex(m => m.id === memeNew.id);
+            bestMemesNew[bestMemeIdx] = memeNew;
+        }
         
         return { ...state, allMemes: allMemesNew, bestMemes: bestMemesNew };
     }
